@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jimmiebone-rubricgen"
+version = "0.1.0"
+description = "把自然语言评分标准拆成可机械判定的检查项，并标出仍需人判断的部分。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "jimmiebone" }]
+keywords = ["rubric", "evaluation", "llm", "human-eval"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://jimmiebone.github.io"
+Repository = "https://github.com/jimmiebone/rubricgen"
+Issues = "https://github.com/jimmiebone/rubricgen/issues"
+
+[project.scripts]
+rubricgen = "rubricgen:main"
+
+[tool.setuptools]
+py-modules = ["rubricgen"]
